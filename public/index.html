@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sailing Shop PMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cruds">
+    <div class="title">
+        <h1>Sailing Shop PMS</h1>
+        <p>Product Managment System For Sailors</p>
+    </div>
+    <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            
+               <div class="price">
+            <input type="number" name="" id="price" placeholder="price">
+            <input type="number" name="" id="ads" placeholder="ads">
+            <input type="number" name="" id="taxes" placeholder="taxes%">
+            <input type="number" name="" id="discount" placeholder="discount%">
+            <small id="total">$</small>
+                 </div>
+            <input type="number" name="" id="count" placeholder="count">     
+            <input type="text" id="category" placeholder="category">
+            <button  id="createbtn">Create</button>
+     </div>
+     <div class="outputs">
+        <div class="searchBlock">
+            <input type="text" placeholder="Search" id="search">
+                 <div class="btnsearch">
+                    <button onclick="GetSearchMood('title')">Search By Title</button>
+                    <button onclick="GetSearchMood('category')">Search By Category</button>                    
+                </div>
+        </div>
+     </div>
+     <div id="deleteAll">
+        <button id="deletebtn">Delete All Producte </button>
+     </div>
+     <table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>ads</th>
+            <th>taxes</th>
+            <th>discont</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+         </tr>
+         <tbody id="itemsList">
+           
+         </tbody>
+    </table>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
