@@ -1,85 +1,161 @@
-*{
-    margin:0;
+/* Reset & Base */
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #ecf1f1;
-    font-family: system-ui;
-    color: #030303;
+body {
+    background-color: #121418;
+    color: #e2e6ea;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 30px;
 }
-.title{
-    text-align: center;
 
-}
-.cruds{
-    width: 80%;
+/* Main Container */
+.cruds {
+    max-width: 1100px;
     margin: auto;
+    padding: 30px;
+    background: #1c1f26;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
-input{
-    background-color: #D4C9BE;
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 30px;
-    margin: 4px 0;
-    border-radius: 4px;
-    padding: 5px;
-    color: whitesmoke;
 
-}
-input:focus{
-    background-color: rgb(0, 0, 0);
-    transform: scale(1.005);
-}
-.price input{
-    width: 20%;
-}
-#total{
-    background-color: #F38C79;
-    padding: 4px;
-    border-radius: 3px;
-}
-#total::before{
-    content: 'total: ';
-}
-button{
-    background-color: #123458;
-    border: none;
-    width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    color: white;
-    cursor: pointer;
-    transition: 0.5s;
-    
-
-}
-button:hover{
-    background-color: rgb(45, 85, 117);
-    letter-spacing: 1px;
-
-}
-.btnsearch{
-    display: flex;
-    justify-content: space-between;
-}
-.btnsearch button{
-    width: 45%;
-    
-}
-table{
-    width: 100%;
+/* Header */
+.title {
     text-align: center;
-    margin: 10px 0 ;
+    margin-bottom: 25px;
 }
-table th{
-    text-transform: uppercase;
+.title h1 {
+    font-size: 2.6rem;
+    color: #4db8ff;
 }
-th ,td{
-    padding: 5px;
+.title p {
+    font-size: 1.2rem;
+    color: #a3aab7;
 }
 
-#deleteAll button{
-    margin-top: 5px;
+/* Input Fields */
+input {
+    width: 100%;
+    height: 40px;
+    background-color: #2a2d36;
+    border: 1px solid #3a3f4b;
+    border-radius: 6px;
+    padding: 0 12px;
+    color: #f0f0f0;
+    margin: 8px 0;
+    transition: border 0.3s, background-color 0.3s;
+}
+input::placeholder {
+    color: #888;
+}
+input:focus {
+    outline: none;
+    background-color: #31343e;
+    border-color: #4db8ff;
+}
+
+/* Price Section */
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.price input {
+    flex: 1;
+    min-width: 90px;
+}
+
+/* Total Display */
+#total {
+    background-color: #6fdc8c;
+    color: #0f1114;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-left: 10px;
+}
+#total::before {
+    content: 'Total: ';
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    height: 42px;
+    background-color: #4db8ff;
+    color: #0f1114;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover {
+    background-color: #329dd8;
+    transform: scale(1.02);
+}
+
+/* Search Buttons */
+.btnsearch {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+.btnsearch button {
+    width: 50%;
+}
+
+/* Delete All Button */
+#deleteAll {
+    margin-top: 20px;
+}
+#deleteAll button {
+    background-color: #f56262;
+    color: white;
+}
+#deleteAll button:hover {
+    background-color: #e04a4a;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2d36;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #3a3f4b;
+    text-align: center;
+    color: #eaeaea;
+}
+th {
+    background-color: #1c1f26;
+    color: #4db8ff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+tr:hover {
+    background-color: #1f232b;
+}
+.logo {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 80px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(77, 184, 255, 0.4));
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.05);
 }
