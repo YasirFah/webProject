@@ -28,8 +28,10 @@ Key Features
 Installation Guide
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Prerequisites
--Node.js (Latest LTS version)
--MongoDB (Local or Atlas Cloud)
+
+Node.js (Latest LTS version)
+
+MongoDB (Local or Atlas Cloud)
 
 
 Usage Guide
@@ -49,13 +51,13 @@ Create a product – Fill the form & click Create.
 
 API Documentation
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Base URL: http://localhost:5000
+| Method | Endpoint              | Description           |
+|--------|-----------------------|-----------------------|
+| GET    | `/api/products`       | Get all products      |
+| POST   | `/api/products`       | Add new product       |
+| PUT    | `/api/products/:id`   | Update product by ID  |
+| DELETE | `/api/products/:id`   | Delete product by ID  |
 
-Method	Endpoint	Description
-GET	        /api/products	       Get all products
-POST	      /api/products	       Add new product
-PUT	        /api/products/:id	   Update product by ID
-DELETE    	/api/products/:id	   Delete product by ID
 
 
 Chalenges and Soluations 
@@ -63,24 +65,32 @@ Chalenges and Soluations
 
 1. Search Not Working After MongoDB Integration
 
+
 -Problem: After integrating MongoDB, the search-by-title/category stopped.
+
 -Cause: The frontend logic wasn't properly updated to sync with the database results.
+
    Fix:
+
 -Restored the GetSearchMood() function and added JavaScript-based filtering to dynamically update the interface.
 
 2. Problem: Team Members Unable to Access MongoDB Database
 
 -Cause: the admin didn’t gave all users permission to access data 
    Fix: 
+
 -Give all users permissions for the database they are trying to access
+
 -Ensure the user’s IP is added to the MongoDB access list.
 
 Contributors
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Student Name	               University ID
-Omar Samir Salman Mansour	   443018814
-Saud Mashary Aldlabahy 	     444001811
-Abdullah Rasheed Altamimi	   443022779
-Yasir Fahad Alateeq	         444002716
-Omer Adel Elfaki	           443019505
+| Student Name                   | University ID |
+|--------------------------------|---------------|
+| Omar Samir Salman Mansour      | 443018814     |
+| Saud Mashary Aldlabahy         | 444001811     |
+| Abdullah Rasheed Altamimi      | 443022779     |
+| Yasir Fahad Alateeq            | 444002716     |
+| Omer Adel Elfaki               | 443019505     |
+
 
